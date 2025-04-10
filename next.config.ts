@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+// import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const nextConfig = {
+  experimental: {
+    appDir: true,
+    serverComponentsExternalPackages: ['bcrypt'] // Для работы bcrypt
+  }
+}
 
-export default nextConfig;
+module.exports = nextConfig
